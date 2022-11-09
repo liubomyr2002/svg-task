@@ -1,16 +1,35 @@
-body {
-    padding: 50px;
-}
-
-.box {
+.grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 200px);
 }
 
 .svg {
-    width: 400px;
-    height: 300px;
-    border: 1px solid #000;
-    margin-bottom: 50px;
+    width: 300px;
+    height: 500px;
+    animation: rotate 51.7s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        background-color: red;
+        width: 0px;
+    }
+    50% {
+        transform: rotate(-360deg);
+        background-color: green;
+        width: 90px;
+        border-radius: 50%;
+    }
+    75% {
+        background-color: blue;
+        width: 100vw;
+    }
+    100% {
+        background-color: black;
+        transform: rotate(360deg);
+        width: 10vh;
+        border-radius: 0;
+    }
 }
